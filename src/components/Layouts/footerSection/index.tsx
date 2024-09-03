@@ -34,8 +34,9 @@ const Footer = () => {
             href={link.link}
             key={link.id}
             className="p-2 mb-1 rounded-md hover:underline font-light"
+            target="_blank"
           >
-            <p>{link.name}</p>
+            <p className="text-base md:text-lg">{link.name}</p>
           </Link>
         ))}
       </div>

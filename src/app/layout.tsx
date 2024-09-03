@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Oswald } from "next/font/google";
-import Sidebar from "@/components/Sidebar";
 import "./globals.css";
 import "boxicons/css/boxicons.min.css";
 import { DarkModeProvider } from "@/components/darkMode/darkMode";
+import MainLayout from "@/components/Layouts/mainLayout";
 
 const oswald = Oswald({ weight: "300", subsets: ["latin"] });
 
@@ -23,10 +23,7 @@ export default function RootLayout({
         className={`${oswald.className} dark:bg-primaryDark dark:text-white transition-colors`}
       >
         <DarkModeProvider>
-          <div className="container text-xl flex w-1/2 justify-center">
-            <Sidebar />
-            {children}
-          </div>
+          <MainLayout>{children}</MainLayout>
         </DarkModeProvider>
       </body>
     </html>

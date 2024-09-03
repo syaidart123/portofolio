@@ -8,7 +8,7 @@ import EmailSection from "@/components/Layouts/emailSection";
 
 export default function Home() {
   return (
-    <main className="flex m-2 flex-col w-4/6">
+    <>
       <Header
         title="Home"
         subtitle="Introduction and Professional Experience"
@@ -35,7 +35,7 @@ export default function Home() {
             </span>
             Experience
           </p>
-          <div className="flex border shadow rounded-md p-4 w-1/2 my-3 dark:border-secondaryDark">
+          <div className="flex border shadow rounded-md p-4 w-full  lg:w-3/4 my-3 dark:border-secondaryDark">
             <Image
               alt="profile"
               src="/images/hi.png"
@@ -44,14 +44,14 @@ export default function Home() {
               className=" w-20 h-20 mb-2 mr-4 object-contain"
             />
             <div>
-              <p className="font-semibold">Fullstack Developer</p>
+              <p className="font-semibold text-lg">Fullstack Developer</p>
               <Link
                 href={"https://human-initiative.org/"}
-                className="font-light my-1 text-lg underline hover:cursor-pointer"
+                className=" my-1 text-base underline hover:cursor-pointer"
               >
                 Human Initiative Jawa Barat
               </Link>
-              <p className="font-light">Maret 2024 - Juli 2024</p>
+              <p className="text-base">Maret 2024 - Juli 2024</p>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
             Tech Stack
           </p>
           <div className="relative overflow-hidden">
-            <Marquee pauseOnHover direction="left" className="my-3">
+            <Marquee pauseOnHover direction="left" className="my-3 -z-10">
               {[...techStack, ...techStack].map((tech, index) => (
                 <div
                   key={index}
@@ -84,11 +84,11 @@ export default function Home() {
               ))}
             </Marquee>
 
-            <Marquee className="my-3" pauseOnHover direction="right">
+            <Marquee className="my-3 -z-10" pauseOnHover direction="right">
               {[...techStack, ...techStack].map((tech, index) => (
                 <div
                   key={index}
-                  className="flex border w-40 rounded-md shadow-md justify-center py-1 mx-2 cursor-pointer hover:border-primary hover:shadow-secondary hover:ease-in-out dark:border-secondaryDark"
+                  className=" flex border w-40 rounded-md shadow-md justify-center py-1 mx-2 cursor-pointer hover:border-primary hover:shadow-secondary hover:ease-in-out dark:border-secondaryDark"
                 >
                   <Image
                     alt={tech.name}
@@ -111,6 +111,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-    </main>
+    </>
   );
 }

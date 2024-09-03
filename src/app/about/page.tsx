@@ -6,7 +6,7 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <main className="flex m-2 flex-col w-4/6 ">
+    <>
       <Header title="About" subtitle="A glimpse into my personal journey" />
       <div className="flex flex-col border rounded-md shadow-md p-4 dark:border-secondaryDark">
         <div className="py-5 flex flex-col gap-3 text-justify font-light">
@@ -49,8 +49,8 @@ const AboutPage = () => {
           </p>
           <div className="flex gap-3 py-3">
             {techStack
-              .filter((e) => e.favorite)
-              .map((item, index) => (
+              .filter((e: any) => e.favorite)
+              .map((item: any, index: any) => (
                 <div key={index}>
                   <div className="col-start-2">
                     <div className="relative inline-block group">
@@ -76,7 +76,7 @@ const AboutPage = () => {
         </div>
       </div>
       <Footer />
-    </main>
+    </>
   );
 };
 
