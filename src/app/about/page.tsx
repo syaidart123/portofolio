@@ -11,18 +11,18 @@ const AboutPage = () => {
       <div className="flex flex-col border rounded-md shadow-md p-4 dark:border-secondaryDark">
         <div className="py-5 flex flex-col gap-3 text-justify font-light">
           <p>
-            Hi everyone, I'm Syaid Abdurrohman. My coding journey began as a
-            self-taught developer, diving deep into countless YouTube tutorials.
-            These videos opened my eyes to the vast world of frontend
+            Hi everyone, I&apos;em Syaid Abdurrohman. My coding journey began as
+            a self-taught developer, diving deep into countless YouTube
+            tutorials. These videos opened my eyes to the vast world of frontend
             development. The more I explored, the more fascinated I became with
             the countless concepts and technologies I could learn.{" "}
           </p>
           <p>
             {" "}
-            I've chosen to specialize in frontend development because I
+            I&apos;ve chosen to specialize in frontend development because I
             genuinely enjoy creating user-friendly interfaces and interactions.
-            There's a unique satisfaction in crafting responsive and visually
-            appealing UI elements.
+            There&apos;s a unique satisfaction in crafting responsive and
+            visually appealing UI elements.
           </p>
           <p>
             {" "}
@@ -34,7 +34,7 @@ const AboutPage = () => {
           <p>
             {" "}
             I believe that sharing knowledge is the best way to learn.
-            Therefore, I'll be using this website to document my learning
+            Therefore, I&apos;ll be using this website to document my learning
             journey, from small-scale projects to more complex ones. I hope that
             the content I share will be helpful to anyone aspiring to become a
             frontend developer.

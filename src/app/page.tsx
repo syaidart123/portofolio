@@ -16,11 +16,11 @@ export default function Home() {
       <div className="flex flex-col border rounded-md shadow-md p-4 dark:border-secondaryDark">
         <div className="py-5">
           <h1 className="text-4xl font-bold mb-4">
-            Hello, I'm Syaid Abdurrohman
+            Hello, I&apos;m Syaid Abdurrohman
           </h1>
           <p className="text-justify font-light py-2">
-            I'm frontend developer with a passion for transforming ideas into
-            engaging and responsive digital experiences. I specialize in
+            I&apos;m frontend developer with a passion for transforming ideas
+            into engaging and responsive digital experiences. I specialize in
             crafting user interfaces that are not only visually striking but
             also intuitive and efficient.
           </p>
