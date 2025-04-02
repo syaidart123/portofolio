@@ -13,8 +13,8 @@ const Sidebar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
   return (
-    <div className="h-1/2 sticky top-5 flex justify-center">
-      <aside className=" hidden lg:flex flex-col max-w-2/6 m-2 rounded-md border shadow-md dark:border-secondaryDark">
+    <div className="h-1/2 sticky top-5 flex justify-center lg:mr-8">
+      <aside className=" hidden lg:flex flex-col max-w-2/6 m-2 rounded-md border shadow-md shadow-secondary dark:border-secondaryDark animate-flicker">
         <div className="h-72 flex items-center justify-center px-4 border-b dark:border-secondaryDark">
           <div className="flex flex-col justify-center items-center px-10">
             <Image
@@ -22,7 +22,7 @@ const Sidebar = () => {
               src="/images/profile.jpg"
               width={500}
               height={500}
-              className="rounded-full w-28 h-28 border shadow mb-2 dark:border-secondaryDark"
+              className="rounded-full w-28 h-28 border shadow-md shadow-secondary animate-flicker mb-2 dark:border-secondaryDark"
             />
             <p className="text-xl">Syaid Abdurrohman</p>
             <p className="text-sm mb-3">Front End Developer</p>
@@ -32,7 +32,7 @@ const Sidebar = () => {
                   href={link.link}
                   key={link.id}
                   target="_blank"
-                  className="text-2xl my-1 rounded-md ease-in-out duration-300 bg-slate-100 hover:bg-gradient-to-r from-primary to-secondary hover:text-white hover: px-2 py-1 dark:text-secondaryDark dark:hover:text-white "
+                  className="text-2xl my-1 animate-flicker rounded-md ease-in-out duration-300 bg-slate-100 hover:bg-gradient-to-r from-primary to-secondary hover:text-white hover: px-2 py-1 dark:text-secondaryDark dark:hover:text-white "
                 >
                   {link.icon}
                 </Link>
@@ -59,7 +59,7 @@ const Sidebar = () => {
           ))}
         </div>
       </aside>
-      <nav className="z-[9999] container w-3/4 md:w-2/6 fixed bottom-2 left-0 right-0 lg:hidden bg-white border-t dark:border-secondaryDark p-2 shadow-md rounded-xl dark:bg-secondaryDark">
+      <nav className="z-[9999] animate-flicker container w-3/4 md:w-2/6 fixed bottom-2 left-0 right-0 lg:hidden bg-white border-t dark:border-secondaryDark p-2 shadow-md rounded-xl dark:bg-secondaryDark">
         <div className="flex justify-around items-center">
           {linkSidebar.map((link) => (
             <Link
@@ -91,7 +91,7 @@ const Sidebar = () => {
                       href={link.link}
                       key={link.id}
                       target="_blank"
-                      className="text-2xl my-1 rounded-md ease-in-out duration-300  hover:bg-gradient-to-r from-primary to-secondary hover:text-white px-4 py-2 dark:text-secondaryDark dark:hover:text-white"
+                      className="text-2xl my-1 rounded-md ease-in-out duration-300 hover:bg-gradient-to-r from-primary to-secondary hover:text-white px-4 py-2 dark:text-white "
                     >
                       {link.icon}
                     </Link>

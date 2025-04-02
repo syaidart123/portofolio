@@ -8,10 +8,10 @@ const AboutPage = () => {
   return (
     <>
       <Header title="About" subtitle="A glimpse into my personal journey" />
-      <div className="flex flex-col border rounded-md shadow-md p-4 dark:border-secondaryDark">
+      <div className="flex flex-col border rounded-md shadow shadow-secondary animate-flicker p-4 dark:border-secondaryDark">
         <div className="py-5 flex flex-col gap-3 text-justify font-light">
           <p>
-            Hi everyone, I&apos;em Syaid Abdurrohman. My coding journey began as
+            Hi everyone, I&apos;m Syaid Abdurrohman. My coding journey began as
             a self-taught developer, diving deep into countless YouTube
             tutorials. These videos opened my eyes to the vast world of frontend
             development. The more I explored, the more fascinated I became with

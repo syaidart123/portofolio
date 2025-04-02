@@ -15,7 +15,7 @@ const Card = (props: propTypes) => {
   const { image, title, link, desc, tech } = props;
   return (
     <Link className="cursor-pointer" href={link} target="_blank">
-      <div className="flex flex-col bg-white h-full border rounded-xl shadow hover:shadow-secondary hover:shadow-md hover:border-primary hover:scale-105 hover:duration-500 hover:ease-in-out dark:bg-secondaryDark dark:border-secondaryDark">
+      <div className="flex flex-col bg-white h-full border rounded-xl hover:shadow-secondary hover:shadow-md hover:animate-flicker hover:scale-105 hover:duration-500 hover:ease-in-out dark:bg-secondaryDark shadow-secondary shadow dark:border-gray-500">
         <Image
           className="w-full h-auto rounded-t-xl"
           src={image}

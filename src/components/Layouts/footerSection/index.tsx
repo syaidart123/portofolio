@@ -26,7 +26,7 @@ const linkFooter = [
 
 const Footer = () => {
   return (
-    <div>
+    <div className="pb-20 lg:pb-0">
       <hr className="border-0 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mt-5" />
       <div className="flex justify-center items-center gap-3 mt-3">
         {linkFooter.map((link) => (

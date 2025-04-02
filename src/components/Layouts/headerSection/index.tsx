@@ -17,7 +17,7 @@ const Header = (props: propTypes) => {
         <p className="font-light mt-3">{subtitle}</p>
         <button
           onClick={toggleDarkMode}
-          className="absolute top-2 right-3 text-2xl px-2 py-1 border rounded-full shadow-md dark:border-gray-600"
+          className="absolute top-2 shadow-md animate-flicker duration-300 hover:bg-gradient-to-r from-primary to-secondary hover:text-white hover:dark:text-secondaryDark right-3 text-2xl px-2 py-1 border rounded-full dark:border-gray-600"
         >
           {darkMode ? (
             <i className="bx bx-sun"></i>

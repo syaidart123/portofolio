@@ -1,19 +1,29 @@
 import Image from "next/image";
-import { techStack } from "@/data";
+import { dataExperience, techStack } from "@/data";
 import Marquee from "react-fast-marquee";
-import Link from "next/link";
 import Footer from "@/components/Layouts/footerSection";
 import Header from "@/components/Layouts/headerSection";
 import EmailSection from "@/components/Layouts/emailSection";
-
+import { useMemo } from "react";
 export default function Home() {
+  const shuffleArray = (techStack: any) => {
+    return [...techStack].sort(() => Math.random() - 0.5);
+  };
+  const shuffledTechStack1 = useMemo(
+    () => shuffleArray(techStack),
+    [techStack]
+  );
+  const shuffledTechStack2 = useMemo(
+    () => shuffleArray(techStack),
+    [techStack]
+  );
   return (
     <>
       <Header
         title="Home"
         subtitle="Introduction and Professional Experience"
       />
-      <div className="flex flex-col border rounded-md shadow-md p-4 dark:border-secondaryDark">
+      <div className="flex flex-col border rounded-md p-4 dark:border-secondaryDark shadow-secondary shadow animate-flicker">
         <div className="py-5">
           <h1 className="text-4xl font-bold mb-4">
             Hello, I&apos;m Syaid Abdurrohman
@@ -35,25 +45,25 @@ export default function Home() {
             </span>
             Experience
           </p>
-          <div className="flex border shadow rounded-md p-4 w-full  lg:w-3/4 my-3 dark:border-secondaryDark">
-            <Image
-              alt="profile"
-              src="/images/hi.png"
-              width={500}
-              height={500}
-              className=" w-20 h-20 mb-2 mr-4 object-contain"
-            />
-            <div>
-              <p className="font-semibold text-lg">Fullstack Developer</p>
-              <Link
-                href={"https://human-initiative.org/"}
-                className=" my-1 text-base underline hover:cursor-pointer"
-              >
-                Human Initiative Jawa Barat
-              </Link>
-              <p className="text-base">Maret 2024 - Juli 2024</p>
-            </div>
-          </div>
+          {dataExperience.map((item) => (
+            <ol
+              key={item.id}
+              className="relative -z-10 border-s border-gray-200 dark:border-gray-700"
+            >
+              <li className="ms-4">
+                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  {item.time}
+                </time>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {item.title} at {item.company}
+                </h3>
+                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                  {item.desc}
+                </p>
+              </li>
+            </ol>
+          ))}
         </div>
 
         <div className="py-5 border-t dark:border-secondaryDark">
@@ -65,44 +75,48 @@ export default function Home() {
           </p>
           <div className="relative overflow-hidden">
             <Marquee pauseOnHover direction="left" className="my-3 -z-10">
-              {[...techStack, ...techStack].map((tech, index) => (
-                <div
-                  key={index}
-                  className="flex border w-40 rounded-md shadow-md justify-center py-1 mx-2 cursor-pointer hover:border-primary hover:shadow-secondary hover:ease-in-out dark:border-secondaryDark"
-                >
-                  <Image
-                    alt={tech.name}
-                    src={tech.image}
-                    width={500}
-                    height={500}
-                    className="w-8 h-8 mr-4 object-contain"
-                  />
-                  <div className="flex items-center justify-center">
-                    <p>{tech.name}</p>
+              {[...shuffledTechStack1, ...shuffledTechStack1].map(
+                (tech, index) => (
+                  <div
+                    key={index}
+                    className="flex border w-40 rounded-md shadow-md justify-center py-1 mx-2 cursor-pointer hover:border-primary hover:shadow-secondary hover:ease-in-out dark:border-secondaryDark"
+                  >
+                    <Image
+                      alt={tech.name}
+                      src={tech.image}
+                      width={500}
+                      height={500}
+                      className="w-8 h-8 mr-4 object-contain"
+                    />
+                    <div className="flex items-center justify-center">
+                      <p>{tech.name}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              )}
             </Marquee>
 
             <Marquee className="my-3 -z-10" pauseOnHover direction="right">
-              {[...techStack, ...techStack].map((tech, index) => (
-                <div
-                  key={index}
-                  className=" flex border w-40 rounded-md shadow-md justify-center py-1 mx-2 cursor-pointer hover:border-primary hover:shadow-secondary hover:ease-in-out dark:border-secondaryDark"
-                >
-                  <Image
-                    alt={tech.name}
-                    src={tech.image}
-                    width={500}
-                    height={500}
-                    className="w-8 h-8 mr-4 object-contain"
-                    loading="lazy"
-                  />
-                  <div className="flex items-center justify-center">
-                    <p>{tech.name}</p>
+              {[...shuffledTechStack2, ...shuffledTechStack2].map(
+                (tech, index) => (
+                  <div
+                    key={index}
+                    className=" flex border w-40 rounded-md shadow-md justify-center py-1 mx-2 cursor-pointer hover:border-primary hover:shadow-secondary hover:ease-in-out dark:border-secondaryDark"
+                  >
+                    <Image
+                      alt={tech.name}
+                      src={tech.image}
+                      width={500}
+                      height={500}
+                      className="w-8 h-8 mr-4 object-contain"
+                      loading="lazy"
+                    />
+                    <div className="flex items-center justify-center">
+                      <p>{tech.name}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              )}
             </Marquee>
           </div>
         </div>

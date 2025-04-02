@@ -31,8 +31,8 @@ export const techStack = [
   },
   {
     id: 6,
-    name: "Redux",
-    image: "/images/techStack/redux.png",
+    name: "Bootstrap",
+    image: "/images/techStack/bootstrap.png",
     favorite: false,
   },
   {
@@ -43,14 +43,14 @@ export const techStack = [
   },
   {
     id: 8,
-    name: "Sass",
-    image: "/images/techStack/sass.png",
+    name: "CSS",
+    image: "/images/techStack/css.png",
     favorite: false,
   },
   {
     id: 9,
-    name: "Node.js",
-    image: "/images/techStack/node.png",
+    name: "Playwright",
+    image: "/images/techStack/playwright.png",
     favorite: false,
   },
   {
@@ -70,6 +70,18 @@ export const techStack = [
     name: "TypeScript",
     image: "/images/techStack/typescript.png",
     favorite: true,
+  },
+  {
+    id: 13,
+    name: "Laravel",
+    image: "/images/techStack/laravel.png",
+    favorite: false,
+  },
+  {
+    id: 14,
+    name: "Vue",
+    image: "/images/techStack/vue.png",
+    favorite: false,
   },
 ];
 
@@ -117,6 +129,25 @@ export const linkSosmed = [
 
 export const dataProjects = [
   {
+    id: 3,
+    image: "/images/project/project3.jpeg",
+    link: "https://chromewebstore.google.com/detail/remindeen/hoaielmggcbaiaomgmieobdloimgphio",
+    title: "Remindeen",
+    desc: "Browser extension that reminds users of prayer times and displays selected hadith, ensuring easy access to Islamic reminders during daily browsing.",
+    tech: [
+      {
+        id: 1,
+        name: "React.js",
+        image: "/images/techStack/react.png",
+      },
+      {
+        id: 2,
+        name: "Tailwind",
+        image: "/images/techStack/tailwind.png",
+      },
+    ],
+  },
+  {
     id: 1,
     image: "/images/project/project1.png",
     link: "https://staging-info-bencana.vercel.app/",
@@ -139,5 +170,48 @@ export const dataProjects = [
         image: "/images/techStack/firebase.png",
       },
     ],
+  },
+  {
+    id: 2,
+    image: "/images/project/project2.png",
+    link: "https://sip-dishub.jabarprov.go.id/monita-v2",
+    title: "MONITA V2",
+    desc: "Dashboard for managing vehicle transportation data visualization to enhance operational efficiency.",
+    tech: [
+      {
+        id: 1,
+        name: "Next.js",
+        image: "/images/techStack/next.png",
+      },
+      {
+        id: 2,
+        name: "Tailwind",
+        image: "/images/techStack/tailwind.png",
+      },
+    ],
+  },
+];
+
+export const dataExperience = [
+  {
+    id: 3,
+    title: "Web Developer",
+    company: "VML",
+    time: "Mar 2025 - Present",
+    desc: "Implemented automation testing for Nestle product sales websites.",
+  },
+  {
+    id: 2,
+    title: "Frontend Developer",
+    company: "SCCIC ITB",
+    time: "Okt 2024 - Jan 2025",
+    desc: "Developed dashboards for educational systems and transportation data management.",
+  },
+  {
+    id: 1,
+    title: "Full-stack Developer",
+    company: "Human Initiative",
+    time: "Mar 2024 - Jun 2024",
+    desc: "Building Dynamic Website for Humanitarian Effort",
   },
 ];
