@@ -1,7 +1,9 @@
+"use client";
 import { truncateText } from "@/components/truncate";
+import Aos from "aos";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 type propTypes = {
   image: string;
@@ -9,15 +11,22 @@ type propTypes = {
   link: string;
   desc: string;
   tech: any;
+  id: number;
 };
 
 const Card = (props: propTypes) => {
-  const { image, title, link, desc, tech } = props;
+  const { image, title, link, desc, tech, id } = props;
+        useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: true,
+        })
+      }, [])
   return (
-    <Link className="cursor-pointer" href={link} target="_blank">
+    <Link className="cursor-pointer" href={link} target="_blank" data-aos="fade-up" data-aos-delay={`${id * 100}`}>
       <div className="flex flex-col bg-white h-full border rounded-xl hover:shadow-secondary hover:shadow-md hover:animate-flicker hover:scale-105 hover:duration-500 hover:ease-in-out dark:bg-secondaryDark shadow-secondary shadow dark:border-gray-500">
         <Image
-          className="w-full h-auto rounded-t-xl"
+          className="w-full max-h-44 rounded-t-xl image-contain object-cover"
           src={image}
           width={500}
           height={500}

@@ -1,15 +1,23 @@
+"use client";
 import Footer from "@/components/Layouts/footerSection";
 import Header from "@/components/Layouts/headerSection";
 import { techStack } from "@/data";
+import Aos from "aos";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 const AboutPage = () => {
+    useEffect(() => {
+      Aos.init({
+        duration: 1000,
+        once: true,
+      })
+    }, [])
   return (
     <>
       <Header title="About" subtitle="A glimpse into my personal journey" />
       <div className="flex flex-col border rounded-md shadow shadow-secondary animate-flicker p-4 dark:border-secondaryDark">
-        <div className="py-5 flex flex-col gap-3 text-justify font-light">
+        <div className="py-5 flex flex-col gap-3 text-justify font-light" data-aos="fade-up">
           <p>
             Hi everyone, I&apos;m Syaid Abdurrohman. My coding journey began as
             a self-taught developer, diving deep into countless YouTube
@@ -41,13 +49,13 @@ const AboutPage = () => {
           </p>
         </div>
         <div className="py-5 border-t dark:border-secondaryDark">
-          <p className="text-xl font-medium">
+          <p className="text-xl font-medium" data-aos="zoom-in">
             <span className="mr-2">
               <i className="bx bx-code"></i>
             </span>{" "}
             Favorite Tech Stacks
           </p>
-          <div className="flex gap-3 py-3">
+          <div className="flex gap-3 py-3" data-aos="zoom-in">
             {techStack
               .filter((e: any) => e.favorite)
               .map((item: any, index: any) => (

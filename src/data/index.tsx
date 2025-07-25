@@ -128,6 +128,73 @@ export const linkSosmed = [
 ];
 
 export const dataProjects = [
+      {
+    id: 6,
+    image: "/images/project/project6.png",
+    link: "https://painted-trip.vercel.app",
+    title: "P(AI)ntedTrip",
+    desc: "An AI-driven tool that recommends travel destinations based on artwork images.",
+    tech: [
+      {
+        id: 1,
+        name: "Next.js",
+        image: "/images/techStack/next.png",
+      },
+      {
+        id: 2,
+        name: "Tailwind",
+        image: "/images/techStack/tailwind.png",
+      },
+    ],
+  },
+    {
+    id: 5,
+    image: "/images/project/project5.png",
+    link: "https://www.akudankau.co.id/growth-tracker",
+    title: "Dancow Growth Tracker",
+    desc: "A campaign website for Dancow Growth Tracker, featuring a landing page that highlights child growth tracking initiatives.",
+    tech: [
+      {
+        id: 1,
+        name: "Drupal",
+        image: "/images/techStack/drupal.png",
+      },
+      {
+        id: 2,
+        name: "HTML",
+        image: "/images/techStack/html.png",
+      },
+      {
+        id: 2,
+        name: "CSS",
+        image: "/images/techStack/css.png",
+      },
+    ],
+  },
+  {
+    id: 4,
+    image: "/images/project/project4.png",
+    link: "https://www.akudankau.co.id/indonesia-cerdas",
+    title: "Dancow Indonesia Cerdas",
+    desc: "A campaign website for Dancow Indonesia Cerdas, featuring a landing page that highlights educational initiatives.",
+    tech: [
+      {
+        id: 1,
+        name: "Drupal",
+        image: "/images/techStack/drupal.png",
+      },
+      {
+        id: 2,
+        name: "HTML",
+        image: "/images/techStack/html.png",
+      },
+      {
+        id: 2,
+        name: "CSS",
+        image: "/images/techStack/css.png",
+      },
+    ],
+  },
   {
     id: 3,
     image: "/images/project/project3.jpeg",
@@ -198,7 +265,7 @@ export const dataExperience = [
     title: "Web Developer",
     company: "VML",
     time: "Mar 2025 - Present",
-    desc: "Implemented automation testing for Nestle product sales websites.",
+    desc: "Contributed to multiple campaign and innovation projects, including developing landing pages for Dancow educational and growth tracking initiatives, as well as creating P(AI)ntedTrip, an AI-driven tool that recommends travel destinations based on artwork images.",
   },
   {
     id: 2,

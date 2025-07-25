@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
 import { dataExperience, techStack } from "@/data";
 import Marquee from "react-fast-marquee";
 import Footer from "@/components/Layouts/footerSection";
 import Header from "@/components/Layouts/headerSection";
 import EmailSection from "@/components/Layouts/emailSection";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
+import AOS from 'aos'
 export default function Home() {
   const shuffleArray = (techStack: any) => {
     return [...techStack].sort(() => Math.random() - 0.5);
@@ -17,6 +19,14 @@ export default function Home() {
     () => shuffleArray(techStack),
     [techStack]
   );
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
   return (
     <>
       <Header
@@ -25,20 +35,20 @@ export default function Home() {
       />
       <div className="flex flex-col border rounded-md p-4 dark:border-secondaryDark shadow-secondary shadow animate-flicker">
         <div className="py-5">
-          <h1 className="text-4xl font-bold mb-4">
-            Hello, I&apos;m Syaid Abdurrohman
+          <h1 className="text-4xl font-bold mb-4 fade-left" data-aos="fade-left">
+            Hallo, I&apos;m Syaid Abdurrohman
           </h1>
-          <p className="text-justify font-light py-2">
+          <p className="text-justify font-light py-2" data-aos="zoom-in">
             I&apos;m frontend developer with a passion for transforming ideas
             into engaging and responsive digital experiences. I specialize in
             crafting user interfaces that are not only visually striking but
             also intuitive and efficient.
           </p>
-          <button className="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-md my-3 shadow-md">
+          <button className="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-md my-3 shadow-md" data-aos="fade-up">
             Download CV
           </button>
         </div>
-        <div className="mt-3 py-5 border-t dark:border-secondaryDark">
+        <div className="mt-3 py-5 border-t dark:border-secondaryDark" data-aos="fade-up">
           <p className="text-2xl font-medium mb-3">
             <span>
               <i className="bx bx-briefcase text-2xl font-bold mr-2 flex items-center"></i>
@@ -49,6 +59,7 @@ export default function Home() {
             <ol
               key={item.id}
               className="relative -z-10 border-s border-gray-200 dark:border-gray-700"
+              data-aos="fade-up"
             >
               <li className="ms-4">
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -120,7 +131,7 @@ export default function Home() {
             </Marquee>
           </div>
         </div>
-        <div className="py-3 border-t dark:border-secondaryDark">
+        <div className="py-3 border-t dark:border-secondaryDark" data-aos="fade-up">
           <EmailSection />
         </div>
       </div>
