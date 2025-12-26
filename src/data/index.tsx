@@ -128,6 +128,25 @@ export const linkSosmed = [
 ];
 
 export const dataProjects = [
+  {
+    id: 7,
+    image: "/images/project/project7.png",
+    link: "https://chromewebstore.google.com/detail/ccepejcdbaamdnpokkmgdfbgpdbmjinl?utm_source=item-share-cb",
+    title: "Kitkat Break Tab",
+    desc: "A browser extension for get discount coupons automatically when break the tab.",
+    tech: [
+      {
+        id: 1,
+        name: "React.js",
+        image: "/images/techStack/react.png",
+      },
+      {
+        id: 2,
+        name: "Tailwind",
+        image: "/images/techStack/tailwind.png",
+      },
+    ],
+  },
       {
     id: 6,
     image: "/images/project/project6.png",
