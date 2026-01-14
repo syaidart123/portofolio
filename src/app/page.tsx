@@ -39,13 +39,27 @@ export default function Home() {
             Hallo, I&apos;m Syaid Abdurrohman
           </h1>
           <p className="text-justify font-light py-2" data-aos="zoom-in">
-            I&apos;m frontend developer with a passion for transforming ideas
-            into engaging and responsive digital experiences. I specialize in
-            crafting user interfaces that are not only visually striking but
-            also intuitive and efficient.
+            Web Developer with 2+ years of experience building high-performing, visually engaging web applications — from campaign landing pages to data-driven dashboards.
+
           </p>
+
+          <p className="text-justify font-light py-2" data-aos="zoom-in">
+            <span className="font-bold"> What I bring:</span>
+            <ul className="list-disc list-inside mt-2">
+              <li>Strong attention to UI detail and visual consistency</li>
+              <li>Experience turning designs (Figma) into responsive, production-ready code</li>
+              <li>Ability to balance creativity with performance and usability</li>
+            </ul>
+          </p>
+
+          <p>
+            Currently open to opportunities as a Web Developer / Frontend Developer, especially roles that value creative UI, strong visual storytelling, and user-centered design.
+          </p>
+
           <button className="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-md my-3 shadow-md" data-aos="fade-up">
+            <a href="/images/CV _SYAID ABDURROHMAN.pdf" target="_blank" download>
             Download CV
+            </a>
           </button>
         </div>
         <div className="mt-3 py-5 border-t dark:border-secondaryDark" data-aos="fade-up">

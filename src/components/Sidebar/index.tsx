@@ -25,7 +25,7 @@ const Sidebar = () => {
               className="rounded-full w-28 h-28 border shadow-md shadow-secondary animate-flicker mb-2 dark:border-secondaryDark"
             />
             <p className="text-xl">Syaid Abdurrohman</p>
-            <p className="text-sm mb-3">Front End Developer</p>
+            <p className="text-sm mb-3">Website Developer</p>
             <div className="flex justify-center items-center gap-3">
               {linkSosmed.map((link) => (
                 <Link

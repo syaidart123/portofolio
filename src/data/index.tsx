@@ -128,6 +128,49 @@ export const linkSosmed = [
 ];
 
 export const dataProjects = [
+      {
+    id: 9,
+    image: "/images/project/project9.png",
+    link: "https://eriset.politeknikpu.ac.id",
+    title: "Eriset Politeknik PU Dashboard",
+    desc: "Dashboard for managing data eriset Politeknik PU",
+    tech: [
+      {
+        id: 1,
+        name: "React.js",
+        image: "/images/techStack/react.png",
+      },
+      {
+        id: 2,
+        name: "Tailwind",
+        image: "/images/techStack/tailwind.png",
+      },
+    ],
+  },
+    {
+    id: 8,
+    image: "/images/project/project8.png",
+    link: "https://geelyauto.id/geely-ex2",
+    title: "GEELY Auto Indonesia EX2",
+    desc: "A website for GEELY Auto Indonesia EX2, featuring a landing page for show information about product EX2.",
+    tech: [
+      {
+        id: 1,
+        name: "Drupal",
+        image: "/images/techStack/drupal.png",
+      },
+      {
+        id: 2,
+        name: "HTML",
+        image: "/images/techStack/html.png",
+      },
+      {
+        id: 3,
+        name: "CSS",
+        image: "/images/techStack/css.png",
+      },
+    ],
+  },
   {
     id: 7,
     image: "/images/project/project7.png",
@@ -283,21 +326,21 @@ export const dataExperience = [
     id: 3,
     title: "Web Developer",
     company: "VML",
-    time: "Mar 2025 - Present",
-    desc: "Contributed to multiple campaign and innovation projects, including developing landing pages for Dancow educational and growth tracking initiatives, as well as creating P(AI)ntedTrip, an AI-driven tool that recommends travel destinations based on artwork images.",
+    time: "Mar 2025 - Dec 2025",
+    desc: "Developed campaign landing pages for national brands (Dancow, Geely Auto Indonesia), focusing on responsive UI, visual storytelling, and performance optimization. Proposed and prototyped innovative initiatives including P(AI)ntedTrip and KitKat “Break The Tab” browser extension.",
   },
   {
     id: 2,
     title: "Frontend Developer",
     company: "SCCIC ITB",
-    time: "Okt 2024 - Jan 2025",
-    desc: "Developed dashboards for educational systems and transportation data management.",
+    time: "Okt 2024 - Feb 2025",
+    desc: "Built a research data management dashboard for Politeknik PU, leveraging React.js and TypeScript to ensure scalability, type safety, and maintainable code.",
   },
   {
     id: 1,
     title: "Full-stack Developer",
     company: "Human Initiative",
-    time: "Mar 2024 - Jun 2024",
-    desc: "Building Dynamic Website for Humanitarian Effort",
+    time: "Feb 2024 - Jul 2024",
+    desc: "Built a disaster information website and aid management dashboard for the West Java region.",
   },
 ];
